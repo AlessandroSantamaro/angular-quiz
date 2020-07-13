@@ -1,0 +1,53 @@
+<div class="aq-quiz">
+  <div class="page-section">
+    <div class="container">
+
+      <div class="row pb-3 justify-content-md-center" *ngIf="!showResult">
+        <div class="col-12 text-center">
+          <circle-progress
+            [percent]="timePercentage"
+            [maxPercent]="totalSeconds"
+            [radius]="80"
+            [outerStrokeColor]="outerStrokeColor"
+            [innerStrokeColor]="innerStrokeColor"
+            [title]="timeTest"
+            [showUnits]="false">
+          </circle-progress>
+        </div>
+      </div>
+
+      <div *ngFor="let question of questions | keyvalue; let i = index">
+        <div class="row pb-3" *ngIf="question.value.getId() === currentQuestion?.getId() && !showResult">
+          <div class="col-12">
+            <app-question
+              [index]="i"
+              [question]="question.value"
+              (nextQuestion)="nextQuestion()"
+              (setSelectedAnswer)="storeSelectedAnswer($event)">
+            </app-question>
+          </div>
+        </div>
+      </div>
+
+      <app-outcome
+        [timePassed]="timePassed"
+        [score]="testResult"
+        *ngIf="showResult">
+      </app-outcome>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <app-modal
+      #quizModal
+      [id]="quizModalConfig.id"
+      [title]="quizModalConfig.title"
+      [description]="quizModalConfig.description"
+      [okButtonLabel]="quizModalConfig.okButtonLabel"
+      (okButtonClick)="checkResult(maxQuizDuration)"
+      (closeButtonClick)="checkResult(maxQuizDuration)">
+    </app-modal>
+  </div>
+
+</div>

@@ -1,0 +1,28 @@
+<div class="aq-question">
+  <div class="row pb-3">
+    <div class="col-12">
+      <p>{{index + 1}} - {{question?.getText()}}</p>
+    </div>
+
+    <div *ngFor="let answer of question?.getAnswers(); let i = index" class="col-12 col-sm-6">
+      <div class="aq-answer aq-answer-{{i}}">
+        <button
+          type="button"
+          class="btn w-100 mt-1"
+          (click)="selectAnswer(answer, question)"
+          [ngClass]="answer.getId() === selectedAnswerId ? 'selected-answer' : 'btn-primary'"
+          [disabled]="answer.getId() === selectedAnswerId">
+          {{answer.getText()}}
+        </button>
+      </div>
+    </div>
+
+    <div class="col-12 mt-5">
+      <button type="button" class="btn btn-secondary w-100 mt-1" (click)="exit()">Exit</button>
+      <button type="button" class="btn btn-primary next-button w-100 mt-1" (click)="next()"
+              [disabled]="selectedAnswerId===null">Next
+      </button>
+    </div>
+
+  </div>
+</div>

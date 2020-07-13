@@ -1,0 +1,141 @@
+{
+  "error": null,
+  "messageResponse": {
+    "code": "OK",
+    "description": "success"
+  },
+  "data": {
+    "questions": [
+      {
+        "id": "1",
+        "text": "I'm very happy _____ in India. I really miss being there.",
+        "answers": [
+          {
+            "id": "1",
+            "text": "to live",
+            "correct": true
+          },
+          {
+            "id": "2",
+            "text": "to have lived",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "text": "to be lived",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "text": "to be living",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "text": "They didn't reach an agreement ______ their differences.",
+        "answers": [
+          {
+            "id": "1",
+            "text": "on account of",
+            "correct": false
+          },
+          {
+            "id": "2",
+            "text": "due",
+            "correct": true
+          },
+          {
+            "id": "3",
+            "text": "because",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "text": "owing",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "text": "I wish I _____ those words. But now it's too late.",
+        "answers": [
+          {
+            "id": "1",
+            "text": "not having said",
+            "correct": true
+          },
+          {
+            "id": "2",
+            "text": "have never said",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "text": "never said",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "text": "had never said",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "text": "The woman, who has been missing for 10 days, is believed _____.",
+        "answers": [
+          {
+            "id": "1",
+            "text": "to be abducted",
+            "correct": false
+          },
+          {
+            "id": "2",
+            "text": "to be abducting",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "text": "to have been abducted",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "text": "to have been abducting",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "text": "She was working on her computer with her baby next to _____.",
+        "answers": [
+          {
+            "id": "1",
+            "text": "herself",
+            "correct": false
+          },
+          {
+            "id": "2",
+            "text": "her",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "text": "her own",
+            "correct": true
+          },
+          {
+            "id": "4",
+            "text": "hers",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+<div class="aq-outcome">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+
+        <h2 class="section-heading text-uppercase"> Quiz result</h2>
+        <div class="score-chart">
+          <circle-progress
+            [percent]="score"
+            [maxPercent]="100"
+            [outerStrokeColor]="outerStrokeColor"
+            [innerStrokeColor]="innerStrokeColor"
+            [showTitle]="true"
+            [title]="score">
+          </circle-progress>
+        </div>
+        <h3 class="section-subheading text-muted">
+          Finished in {{timePassed}}! Your score is {{score}}%.
+        </h3>
+
+        <div class="outcome-footer">
+          <button class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mr-md-4 mt-4 col-12"
+                  routerLink="/home">Home
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

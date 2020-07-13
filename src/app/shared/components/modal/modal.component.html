@@ -1,0 +1,37 @@
+<div class="aq-modal" [id]="id">
+  <ng-template #aqModal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-title">{{title}}</h4>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+        (click)="onClose()"
+        *ngIf="showCloseButton">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <span class="ml-1">{{description}}</span>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-dismiss="modal"
+        backdrop="static"
+        (click)="onCancel()"
+        *ngIf="showCancelButton">
+        {{cancelButtonLabel}}
+      </button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="onOk()"
+        *ngIf="showOkButton">
+        {{okButtonLabel}}
+      </button>
+    </div>
+  </ng-template>
+</div>

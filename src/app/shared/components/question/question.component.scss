@@ -1,0 +1,13 @@
+.aq-question {
+  .aq-answer {
+    .selected-answer {
+      background-color: #feaa10;
+      color: #fff;
+      cursor: default;
+    }
+  }
+
+  .next-button[disabled] {
+    cursor: default;
+  }
+}
